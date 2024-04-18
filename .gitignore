@@ -1,0 +1,20 @@
+node_modules
+.env
+
+# Hardhat files
+/cache
+/artifacts
+/ignition/deployments
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# hardhat config w/ private keys
+hardhat.config.ts
+
+**/*.DS_Store

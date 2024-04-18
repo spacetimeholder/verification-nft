@@ -1,0 +1,14 @@
+{
+  "name": "extract-bytecode",
+  "version": "0.0.20",
+  "description": "extract bytecode from hardhat artifacts json",
+  "bin": "bin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.7.0"
+  }
+}
