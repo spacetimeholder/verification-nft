@@ -107,20 +107,22 @@ contract VerificationV0 is ERC721Enumerable, AccessControl {
    * @dev Returns an array of verifications to the given wallet address
    *
    * @param owner the wallet address to query for verifications
-   * @return Structs.VerificationV0[]
+   * @return Structs.VerificationData[]
    */
   function verifications(address owner)
     public
     view
-    returns (Structs.VerificationV0[] memory)
+    returns (Structs.VerificationData[] memory)
   {
     uint256 bal = balanceOf(owner);
     require(bal > 0, "no verifications");
 
-    Structs.VerificationV0[] memory vers = new Structs.VerificationV0[](bal);
+    Structs.VerificationData[] memory vers = new Structs.VerificationData[](
+      bal
+    );
     for (uint256 i = 0; i < bal; i++) {
       uint256 tokenId = tokenOfOwnerByIndex(owner, i);
-      vers[i] = Structs.VerificationV0(
+      vers[i] = Structs.VerificationData(
         tokenId,
         _tokenServices[tokenId],
         _tokenTimestamps[tokenId]

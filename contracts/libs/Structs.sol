@@ -39,7 +39,7 @@ library Structs {
    * @param service the name of the service, e.g. "Plaid"
    * @param timestamp the UNIX timestamp of when the verification was issued
    */
-  struct VerificationV0 {
+  struct VerificationData {
     uint256 tokenId;
     string service;
     uint256 timestamp;
