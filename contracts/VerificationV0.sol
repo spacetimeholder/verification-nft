@@ -135,11 +135,24 @@ contract VerificationV0 is ERC721Enumerable, AccessControl {
    * @dev Unimplemented. Reverts for all inputs.
    *
    */
-  function transferFrom(
+  // function transferFrom(
+  //   address,
+  //   address,
+  //   uint256
+  // ) public pure virtual override(ERC721, IERC721) {
+  //   revert("tokens non-transferrable");
+  // }
+
+  /**
+   * @dev Unimplemented. Reverts for all inputs.
+   *
+   */
+  function safeTransferFrom(
     address,
     address,
-    uint256
-  ) public pure override(ERC721, IERC721) {
+    uint256,
+    bytes memory
+  ) public pure virtual override(ERC721, IERC721) {
     revert("tokens non-transferrable");
   }
 
